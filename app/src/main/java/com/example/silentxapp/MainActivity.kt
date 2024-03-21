@@ -1,4 +1,4 @@
-package com.example.silentxapp.view
+package com.example.silentxapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,7 +8,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.silentxapp.ui.theme.SilentXAppTheme
 import com.example.silentxapp.util.Routes
+import com.example.silentxapp.view.ReminderScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
