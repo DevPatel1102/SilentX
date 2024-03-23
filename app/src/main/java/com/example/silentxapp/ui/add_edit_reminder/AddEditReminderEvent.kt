@@ -1,4 +1,4 @@
-package com.example.silentxapp.view.add_edit_reminder
+package com.example.silentxapp.ui.add_edit_reminder
 
 sealed class AddEditReminderEvent {
     data class OnTitleChange(val title: String): AddEditReminderEvent()

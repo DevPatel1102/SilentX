@@ -1,4 +1,4 @@
-package com.example.silentxapp.view
+package com.example.silentxapp.ui.reminder_list
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -33,7 +33,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.silentxapp.model.Reminder
 import com.example.silentxapp.R
-import com.example.silentxapp.viewModel.ReminderListEvent
 
 
 @OptIn(ExperimentalMaterial3Api::class)

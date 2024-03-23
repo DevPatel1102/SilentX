@@ -1,4 +1,4 @@
-package com.example.silentxapp.viewModel
+package com.example.silentxapp.ui.reminder_list
 
 import com.example.silentxapp.model.Reminder
 

@@ -6,9 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.silentxapp.ui.theme.SilentXAppTheme
 import com.example.silentxapp.util.Routes
-import com.example.silentxapp.view.ReminderScreen
+import com.example.silentxapp.ui.reminder_list.ReminderScreen
+import com.example.silentxapp.ui.theme.SilentXAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

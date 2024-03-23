@@ -1,4 +1,4 @@
-package com.example.silentxapp.view.add_edit_reminder
+package com.example.silentxapp.ui.add_edit_reminder
 
 import android.util.Log
 import androidx.compose.foundation.background

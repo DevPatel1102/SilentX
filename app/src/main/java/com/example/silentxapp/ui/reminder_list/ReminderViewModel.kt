@@ -1,10 +1,11 @@
-package com.example.silentxapp.viewModel
+package com.example.silentxapp.ui.reminder_list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.silentxapp.repository.ReminderRepository
 import com.example.silentxapp.util.Routes
 import com.example.silentxapp.util.UiEvent
+import com.example.silentxapp.ui.reminder_list.ReminderListEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow

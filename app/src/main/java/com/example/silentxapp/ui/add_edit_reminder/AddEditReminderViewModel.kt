@@ -1,4 +1,4 @@
-package com.example.silentxapp.view.add_edit_reminder
+package com.example.silentxapp.ui.add_edit_reminder
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -45,21 +45,21 @@ class AddEditReminderViewModel @Inject constructor(
     val uiEvent = _uiEvent.receiveAsFlow()
 
 
-    fun onEvent(event:AddEditReminderEvent){
+    fun onEvent(event: AddEditReminderEvent){
         when(event){
-            is AddEditReminderEvent.OnTitleChange->{
+            is AddEditReminderEvent.OnTitleChange ->{
                 title= event.title
             }
-            is AddEditReminderEvent.OnStartTimeChange->{
+            is AddEditReminderEvent.OnStartTimeChange ->{
                 startTime= event.startTime
             }
-            is AddEditReminderEvent.OnEndTimeChange->{
+            is AddEditReminderEvent.OnEndTimeChange ->{
                 endTime= event.endTime
             }
-            is AddEditReminderEvent.OnLocationChange->{
+            is AddEditReminderEvent.OnLocationChange ->{
                 location= event.location
             }
-            is AddEditReminderEvent.OnModeChange->{
+            is AddEditReminderEvent.OnModeChange ->{
                 mode= event.mode
             }
             is AddEditReminderEvent.OnSaveReminderClick ->{
