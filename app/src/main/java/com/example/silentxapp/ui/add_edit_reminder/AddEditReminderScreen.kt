@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.silentxapp.R
+import com.example.silentxapp.util.UiEvent
 import com.vanpra.composematerialdialogs.MaterialDialog
 import com.vanpra.composematerialdialogs.datetime.time.timepicker
 import com.vanpra.composematerialdialogs.rememberMaterialDialogState
@@ -58,6 +59,7 @@ import java.time.format.DateTimeFormatter
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddEditReminderScreen (
+    onNavigate : (UiEvent : UiEvent.Navigate) -> Unit,
     viewModel: AddEditReminderViewModel = hiltViewModel()
 ){
 

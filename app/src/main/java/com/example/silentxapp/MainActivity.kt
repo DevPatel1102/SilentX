@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.silentxapp.ui.add_edit_reminder.AddEditReminderScreen
 import com.example.silentxapp.util.Routes
 import com.example.silentxapp.ui.reminder_list.ReminderScreen
 import com.example.silentxapp.ui.theme.SilentXAppTheme
@@ -27,9 +28,10 @@ class MainActivity : ComponentActivity() {
                         })
                     }
                     composable(
-                        route = Routes.Add_Edit_Reminder
-                    ){
-
+                        route = Routes.Add_Edit_Reminder){
+                        AddEditReminderScreen(onNavigate = {
+                            navController.navigate(it.route)
+                        })
                     }
                 }
             }
