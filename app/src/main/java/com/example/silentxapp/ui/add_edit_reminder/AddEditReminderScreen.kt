@@ -32,6 +32,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -59,9 +60,18 @@ import java.time.format.DateTimeFormatter
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddEditReminderScreen (
-    onNavigate : (UiEvent : UiEvent.Navigate) -> Unit,
+    onPopBackStack: ()->Unit,
     viewModel: AddEditReminderViewModel = hiltViewModel()
 ){
+
+    LaunchedEffect(key1 = true) {
+        viewModel.uiEvent.collect{event ->
+            when(event){
+                is UiEvent.PopBackStack -> onPopBackStack()
+                else -> Unit
+            }
+        }
+    }
 
     val main_mode = remember {
         mutableStateOf("Select Mode")

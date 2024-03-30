@@ -44,6 +44,21 @@ class AddEditReminderViewModel @Inject constructor(
     private val _uiEvent = Channel<UiEvent>()
     val uiEvent = _uiEvent.receiveAsFlow()
 
+    init {
+        val reminderId = savedStateHandle.get<Int>("reminderId")
+        if (reminderId != -1){
+            viewModelScope.launch {
+               repository.getReminderById(reminderId!!)?.let { reminder ->
+                   title=reminder.title
+                   startTime=reminder.startTime
+                   endTime=reminder.endTime
+                   mode=reminder.mode
+                   this@AddEditReminderViewModel.reminder = reminder
+               }
+
+            }
+        }
+    }
 
     fun onEvent(event: AddEditReminderEvent){
         when(event){
@@ -77,7 +92,7 @@ class AddEditReminderViewModel @Inject constructor(
                             id = reminder?.id
                         )
                     )
-                    sendUiEvent(UiEvent.Navigate(Routes.Reminder_List))
+                    sendUiEvent(UiEvent.PopBackStack)
                 }
             }
 

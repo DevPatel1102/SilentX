@@ -47,6 +47,7 @@ fun ReminderScreen(
 
             when (event) {
                 is UiEvent.Navigate -> onNavigate(event)
+                else -> Unit
             }
         }
     }

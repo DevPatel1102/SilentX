@@ -25,7 +25,7 @@ class ReminderViewModel @Inject constructor(
     fun onEvent (event : ReminderListEvent){
         when(event){
             is ReminderListEvent.OnReminderClick ->{
-//                sendUiEvent(UiEvent.Navigate(Routes.Add_Edit_Reminder + "?reminderId=${event.reminder.id}"))
+                sendUiEvent(UiEvent.Navigate(Routes.Add_Edit_Reminder + "?reminderId=${event.reminder.id}"))
             }
             is ReminderListEvent.OnAddReminderClick ->{
                 sendUiEvent(UiEvent.Navigate(Routes.Add_Edit_Reminder))
