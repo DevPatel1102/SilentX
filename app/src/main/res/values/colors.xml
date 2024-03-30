@@ -15,4 +15,6 @@
     <color name="focused_label_color">#969393</color>
     <color name="gradient_start" >#5C5B5B</color>
     <color name="gradient_end" >#A4A4A4</color>
+    <color name="text_color">#a2a2a2</color>
+    <color name="delete_icon_color">#A6FFFFFF</color>
 </resources>

@@ -165,8 +165,8 @@ fun AddEditReminderScreen (
                             unfocusedContainerColor = colorResource(id = R.color.grey),
                             focusedTextColor = Color.White,
                             unfocusedTextColor = Color.White,
-                            unfocusedLabelColor = Color.White,
-                            focusedLabelColor = colorResource(id = R.color.focused_label_color)
+                            unfocusedIndicatorColor = Color.Transparent,
+                            focusedIndicatorColor = Color.Transparent
                         ),
                         textStyle = TextStyle.Default.copy(fontSize = 25.sp)
                     )
